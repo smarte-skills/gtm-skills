@@ -1,0 +1,46 @@
+gtm-skills/
+├── README.md                          # Main repo readme — install, overview, about SMARTe
+├── LICENSE
+│
+├── SKILL.md                           # Master orchestrator — detects persona, routes to sub-skill
+│
+├── references/                        # On-demand reference files — add your company/team context here
+│   ├── reference-file.md
+│   ├── reference-file.md
+│   ├── reference-file.md
+│   └── reference-file.md
+│
+├── skills/
+│   ├── sellers/                       # Skills for SDRs, AEs, and Sales Managers
+│   │   ├── skill-name/
+│   │   │   └── SKILL.md
+│   │   └── skill-name/
+│   │       └── SKILL.md
+│   │
+│   ├── revops/                        # Skills for Revenue Ops and Sales Ops
+│   │   ├── skill-name/
+│   │   │   └── SKILL.md
+│   │   └── skill-name/
+│   │       └── SKILL.md
+│   │
+│   ├── marketing/                     # Skills for Demand Gen, ABM, and Marketing Ops
+│   │   ├── skill-name/
+│   │   │   └── SKILL.md
+│   │   └── skill-name/
+│   │       └── SKILL.md
+│   │
+│   └── gtm-engineers/                 # MCP-powered skills for RevOps builders and automation leads
+│       ├── skill-name/
+│       │   └── SKILL.md               # Detects SMARTe MCP, degrades gracefully if absent
+│       └── skill-name/
+│           └── SKILL.md               # Detects SMARTe MCP, degrades gracefully if absent
+│
+├── agents/
+│   ├── seller.md                      # Quota-carrying AE/SDR persona
+│   ├── revops.md                      # Structured, data-driven RevOps persona
+│   ├── marketer.md                    # Campaign and pipeline-focused persona
+│   └── gtm-engineer.md               # Automation-first builder persona
+│
+└── docs/
+    ├── ARCHITECTURE.md                # Structure, design principles, orchestration flow
+    └── SMARTE-MCP.md                  # What SMARTe MCP is, what it unlocks, and setup guide
