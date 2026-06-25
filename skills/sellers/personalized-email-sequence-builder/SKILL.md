@@ -60,7 +60,27 @@ Fetch, extract, store in memory, confirm, then proceed.
 
 ## Step 1: Sequence Strategy — Design Before Writing
 
-Before writing a single email, define the full sequence architecture. This is the most important step. A sequence written without a strategy is just a list of emails. A sequence written with a strategy is a campaign.
+Before writing a single email, define the full sequence architecture and confirm it with the seller. Do not write any emails until the architecture is approved — this prevents generating a full sequence the seller then wants to restructure.
+
+### Present the architecture first:
+
+After completing Step 0, present the following for seller confirmation before writing:
+
+> "Here's the sequence I'd build for [Prospect Name]:
+>
+> **Length:** [N] touchpoints over [X] days — [one sentence rationale]
+>
+> **Arc:**
+> - Touch 1 (Day 1): [Strategic job + one line on the angle]
+> - Touch 2 (Day 2-3): [LinkedIn / strategic job]
+> - Touch 3 (Day 4-5): [Strategic job + one line on the angle]
+> - Touch 4 (Day 8-10): [Strategic job + one line on the angle]
+> - [Continue for all touches]
+> - Breakup (Day X): The easy out
+>
+> Good to build this out, or want to adjust anything first?"
+
+Wait for confirmation before writing. If the seller wants changes — adjust the architecture, re-present, then build. This one step prevents generating 10+ pages the seller then wants to restructure entirely.
 
 ### 1a. Recommend sequence length based on context:
 
@@ -182,37 +202,7 @@ Apply all writing standards from the Cold Email Writer skill to every email in t
 - Often includes a soft restatement of the core value prop in one sentence — in case they never read the earlier emails
 
 ### Banned words, phrases, and patterns — apply to every email:
-*(Full list from Cold Email Writer applies here — restated for clarity)*
-
-**Banned phrases:**
-- "I hope this finds you well" / "I hope you're doing well"
-- "I wanted to reach out" / "I'm reaching out because"
-- "Following up on my last email" / "Just checking in" / "Circling back" / "Wanted to follow up"
-- "I'd love to..." / "Would love to connect"
-- "Touch base" / "Loop in" / "Ping you"
-- "As per" / "Please find"
-- "I came across your profile and was impressed"
-- "I think we could really help you"
-- Any reference to a previous email in the sequence
-
-**Banned words:**
-- Leverage (as a verb)
-- Synergy / Synergies
-- Game-changer / Game-changing
-- Revolutionary / Cutting-edge / Innovative / Disruptive
-- Seamless / Robust / Best-in-class
-- Excited / Thrilled / Passionate (in a business context)
-- Empower / Transform / Unlock (unless used with surgical precision)
-
-**Banned punctuation:**
-- Em dashes (—) in any form, in any email, without exception
-- Excessive exclamation marks
-- Ellipses used for dramatic effect
-
-**Banned structure:**
-- Bullet points or numbered lists inside any email body
-- Bold or italic text inside any email body
-- Any email over 150 words (breakup: under 100 words)
+All banned words, phrases, and punctuation from the Cold Email Writer skill apply here in full — including the complete prohibition on em dashes (—) in any form. Every email in this sequence is held to the same standard as a standalone cold email. If in doubt: if it sounds like a cold email template, rewrite it.
 
 ### Self-check before presenting any email:
 Run this check on every email in the sequence before showing it to the seller. Rewrite any that fail.
@@ -261,8 +251,7 @@ Present the complete sequence in this exact structure:
 
 [Full email body]
 
-**Why this works:**
-[2-3 sentences on the strategic logic of this specific email — what makes the hook land, why the CTA is right for this stage]
+**Why this works:** [1-2 sentences only]
 
 ---
 
@@ -271,9 +260,6 @@ Present the complete sequence in this exact structure:
 
 **Suggested connection note:**
 [Short LinkedIn note — under 300 characters, no pitch, specific to this person]
-
-**Why this touch here:**
-[One sentence on why LinkedIn presence between Email 1 and Email 2 warms the relationship]
 
 ---
 
@@ -286,8 +272,7 @@ Present the complete sequence in this exact structure:
 
 [Full email body]
 
-**Why this works:**
-[2-3 sentences]
+**Why this works:** [1-2 sentences only]
 
 ---
 
@@ -300,8 +285,7 @@ Present the complete sequence in this exact structure:
 
 [Full email body]
 
-**Why this works:**
-[2-3 sentences — specifically address why no meeting CTA appears here and why that's the right call]
+**Why this works:** [1-2 sentences — note why no meeting CTA appears here]
 
 ---
 
@@ -309,7 +293,7 @@ Present the complete sequence in this exact structure:
 **Strategic job:** Relationship Warm
 
 **Suggested approach:**
-[Specific guidance on what to comment on or engage with — only if the prospect posts publicly. If not: "Skip this touch — prospect does not appear to be active on LinkedIn."]
+[One line — what to comment on or engage with. If prospect isn't active on LinkedIn: "Skip this touch."]
 
 ---
 
@@ -322,8 +306,7 @@ Present the complete sequence in this exact structure:
 
 [Full email body]
 
-**Why this works:**
-[2-3 sentences — specifically address what assumption is being challenged and why this matters at this stage of the sequence]
+**Why this works:** [1-2 sentences — what assumption is being challenged]
 
 ---
 
@@ -331,19 +314,16 @@ Present the complete sequence in this exact structure:
 **Strategic job:** Direct Outreach
 
 **Voicemail script (under 20 seconds):**
-[Full voicemail script — specific, no pitch, references something real]
+[Full voicemail script]
 
-**If they pick up — opening line:**
-[One sentence opening — not "is this a good time", not "I've been trying to reach you"]
-
-**Why this touch here:**
-[One sentence on why a call is warranted at this point in the sequence]
+**If they pick up:**
+[One sentence opening line]
 
 ---
 
 ### Touch 8 — Email (Day 20-22)
 **Strategic job:** Gentle Urgency
-*(Include only if sequence length warrants it — skip for shorter sequences)*
+*(Skip for shorter sequences)*
 
 **Subject:** [Subject line]
 
@@ -351,22 +331,20 @@ Present the complete sequence in this exact structure:
 
 [Full email body]
 
-**Why this works:**
-[2-3 sentences — specifically address what makes the urgency real and non-manipulative]
+**Why this works:** [1-2 sentences — what makes the urgency real]
 
 ---
 
 ### Touch 9 — Breakup Email (Day 25-28)
 **Strategic job:** The Easy Out
 
-**Subject:** [Subject line — consider "Re: [original subject]" if it makes this feel more personal]
+**Subject:** [Subject line]
 
 **Email:**
 
 [Full email body — 80-100 words maximum]
 
-**Why this works:**
-[2-3 sentences — address why the breakup email often has the highest reply rate and what this email is designed to surface]
+**Why this works:** [1 sentence only]
 
 ---
 

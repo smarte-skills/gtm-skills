@@ -235,7 +235,7 @@ Present each variant in this structure:
 ### Variant 1 — [Framework Name]
 
 **Why this framework for this context:**
-[2-3 sentences. Explain why this framework was chosen specifically for this prospect, company, and context. Make the reasoning explicit so the seller understands the logic and can make an informed choice.]
+[2 sentences maximum. Why this framework fits this specific prospect and context.]
 
 **Subject:** [Subject line]
 
@@ -244,14 +244,14 @@ Present each variant in this structure:
 [Full email body — clean, no annotations inside the email itself]
 
 **Why this works:**
-[2-3 sentences on the strategic logic of this specific email. What makes the hook land? Why is the CTA right for this persona? What is this email designed to make the prospect feel or think?]
+[2 sentences maximum. What makes the hook land and why the CTA is right for this persona.]
 
 ---
 
 ### Variant 2 — [Framework Name]
 
 **Why this framework for this context:**
-[2-3 sentences]
+[2 sentences maximum]
 
 **Subject:** [Subject line]
 
@@ -260,7 +260,7 @@ Present each variant in this structure:
 [Full email body]
 
 **Why this works:**
-[2-3 sentences]
+[2 sentences maximum]
 
 ---
 
@@ -268,7 +268,7 @@ Present each variant in this structure:
 *(Only include if a third angle is genuinely distinct and worth presenting)*
 
 **Why this framework for this context:**
-[2-3 sentences]
+[2 sentences maximum]
 
 **Subject:** [Subject line]
 
@@ -277,7 +277,7 @@ Present each variant in this structure:
 [Full email body]
 
 **Why this works:**
-[2-3 sentences]
+[2 sentences maximum]
 
 ---
 

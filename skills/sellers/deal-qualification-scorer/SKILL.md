@@ -160,29 +160,34 @@ State the verdict immediately after the framework selection. Do not bury it. The
 
 ### Layer 2 — Scored Breakdown by Criterion
 
-For each criterion of the selected framework, produce a structured assessment block:
+For each criterion of the selected framework, produce a structured assessment block. The depth of each block scales to the rating — confirmed criteria are brief, gaps are detailed:
+
+**For 🟢 Confirmed criteria:**
+
+**[Criterion Name]** — 🟢 Confirmed
+**What we know:** [Specific evidence. 1-2 sentences only. No gap analysis needed.]
 
 ---
 
-**[Criterion Name]**
+**For 🟡 Partial and 🔴 Missing criteria:**
 
-Rating: 🟢 Confirmed / 🟡 Partial / 🔴 Missing / ⬜ Unknown
+**[Criterion Name]** — 🟡 Partial / 🔴 Missing
 
-**What we know:**
-[Specific evidence from the seller's input that confirms, partially confirms, or contradicts this criterion. Quote or reference actual signals — do not generalise. If nothing is known, say so plainly.]
-
-**What's missing:**
-[Specific gaps — what would need to be true or known for this criterion to be fully confirmed. Be precise: not "more information needed" but "the economic buyer has not been identified — the seller has only spoken to a mid-level manager who cannot sign off on this purchase."]
-
-**Risk if this gap persists:**
-[What happens to the deal if this dimension stays unresolved? Be direct. E.g., "Without a confirmed champion, this deal has no internal advocate when the seller is not in the room. Deals without champions stall or die in committee."]
-
-**What to do:**
-[One or two specific actions the seller can take to close this gap. Concrete — not "find out more about their process" but "ask directly in the next call: 'If we agree on commercial terms, what does the internal sign-off process look like and who needs to be involved?'"]
+**What we know:** [Specific evidence, or "No evidence available."]
+**What's missing:** [Precise gap — not "more info needed" but exactly what is unknown and why it matters.]
+**Risk if this gap persists:** [What it costs the deal if this stays unresolved. Direct, specific.]
+**What to do:** [1-2 concrete actions. Exact questions to ask or steps to take.]
 
 ---
 
-Repeat for every criterion in the selected framework.
+**For ⬜ Unknown criteria:**
+
+**[Criterion Name]** — ⬜ Unknown
+**What's missing:** [What would need to be known for this to be assessable, and when to find it.]
+
+---
+
+Repeat for every criterion in the selected framework. Confirmed criteria stay short. Gaps get depth.
 
 ---
 

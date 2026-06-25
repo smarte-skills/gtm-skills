@@ -57,6 +57,18 @@ Present the recommendation clearly:
 > "Based on what you have, here's what we can run: [list available models with one-line
 > explanation of each]. Which would you like — or want me to run all of them?"
 
+If the user selects multiple models, ask how they want the output presented:
+
+> "You've selected [N] models. Would you prefer:
+> - A combined summary table showing the headline number from each model side by side
+> - Full detail on each model in sequence
+>
+> The combined summary is usually clearest for sharing with leadership. Full detail
+> is better if you want to show your working."
+
+If the user does not specify, default to the combined summary table with an offer
+to expand any individual model on request.
+
 If the user has a description only, proceed but flag every output as directional rather
 than data-driven.
 
@@ -259,12 +271,34 @@ for the team's current position.
 
 ## Step 6 — Output
 
-Always render the projection in chat first. After delivering the output, suggest the
-most relevant format based on context:
+Always render the projection in chat first. When multiple models are run, default to
+the combined summary table unless the user asked for full detail:
+
+**Combined summary table (default for multiple models):**
+
+```
+Model                  | Projected Revenue | vs. Quota | Key assumption
+Pipeline-based         | $[X]              | [+/- %]   | Weighted at stage probabilities
+Trend-based            | $[X]              | [+/- %]   | [X]% historical win rate
+Capacity-based         | $[X]              | [+/- %]   | [N] reps at [X]% attainment
+Scenario — Best case   | $[X]              | [+/- %]   | 35% win rate
+Scenario — Base case   | $[X]              | [+/- %]   | 25% win rate
+Scenario — Worst case  | $[X]              | [+/- %]   | 15% win rate
+```
+
+Show only the rows relevant to the models actually run. Follow with:
+
+> "Want the full working detail for any of these models?"
+
+**If the user asked for full detail on a specific model:** render that model's full
+output table below the summary. Do not render full detail for all models unless the
+user explicitly asks for it.
+
+After delivering output, suggest the most relevant format based on context:
 
 **If the user mentioned leadership, board, or exec review:**
-> "Want me to add a narrative summary above the table — a 2-3 sentence read of what
-> the numbers mean for the business?"
+> "Want me to add a 2-3 sentence narrative above the table — a plain-language read
+> of what the numbers mean for the business?"
 
 **If internal tracking:**
 The table is sufficient. Ask:

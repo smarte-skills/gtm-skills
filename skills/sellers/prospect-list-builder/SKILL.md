@@ -70,7 +70,7 @@ Evaluate exactly what the seller is asking for and what parameters they've provi
 | Company size / stage | Seller input or memory ICP |
 | Geography | Seller input or memory ICP |
 | Additional filters | Seller input only (e.g., "recently funded", "using Salesforce", "hiring SDRs") |
-| List size needed | Seller input (default to 15-20 if not specified) |
+| List size needed | Seller input (default to 10 if not specified) |
 
 ### If input is too vague even with memory context:
 Ask one focused clarifying question. Examples:
@@ -259,6 +259,8 @@ If the seller asks for refinement — adjust and regenerate the relevant section
 
 ## Rules — Non-Negotiable
 
+- **Scale output to what's actually known.** A prospect entry with a strong signal, clear ICP fit, and verified contact data warrants a full block. A prospect with thin context gets a compact entry with gaps flagged. Never pad entries to make the list look more researched than it is.
+- **Default list size is 10.** Only go beyond 10 if the seller explicitly requests more or if SMARTe returns a clean set of additional well-qualified matches. A tight list of 10 strong prospects outperforms a padded list of 20 weak ones every time.
 - **Never fabricate contacts.** Every person on the list must be real and findable. Do not invent names, titles, or companies to fill a list.
 - **Never present unverified data as verified.** If contact details come from web research and not SMARTe, label them clearly: *Found via web research — verify before outreach.*
 - **Quality over quantity always.** A list of 10 well-researched, well-reasoned prospects is more valuable than 50 names with no context. Never pad a list.

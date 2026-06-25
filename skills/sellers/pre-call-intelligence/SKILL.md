@@ -262,7 +262,7 @@ Produce the brief in this exact structure. Every section must be specific to thi
 
 ### ❓ Discovery Questions
 
-[6-8 sharp, open-ended questions. Follow these rules strictly:
+[4-6 sharp, open-ended questions. Scale to call complexity — 4 for a standard first discovery call, up to 6 for complex or multi-stakeholder calls. Follow these rules strictly:
 - Tailored to this contact's specific title and what that persona cares about
 - Reflect the company's context — stage, industry, signals found
 - Sequenced logically — start broad to establish context, then go deeper into pain and impact
@@ -314,6 +314,9 @@ Produce the brief in this exact structure. Every section must be specific to thi
 
 ## Rules — Non-Negotiable
 
+- **Scale output to context.** The depth of every section must match what's actually known. A seller who shares a name and company gets a tight, honest brief. A seller who shares a LinkedIn profile, CRM notes, and call history gets a fuller one. Never pad sections to fill a template — if the intel isn't there, flag the gap in one line and move on. A brief that is half gaps is better than a brief full of filler.
+- **Discovery questions scale to call complexity.** Standard calls get 4-5 questions. Complex multi-stakeholder calls or late-stage deals get up to 6. Never write 6-8 questions for a simple first discovery call — it reads as generated, not researched.
+- **Angle section scales to available context.** If context is thin, the angle is one clear sentence plus a single note on what to avoid. The full 6-field angle block is only warranted when enough is known about the prospect, their company, and their priorities to make each field genuinely specific.
 - **Never fabricate.** Do not invent headcount, revenue, funding rounds, tech stack, contact details, or signals. If it isn't from the seller's input, SMARTe, CRM, or a verifiable web source — do not include it.
 - **Flag every gap cleanly.** If a field can't be filled from available context, write: *Not enough context — ask during the call.* Never leave a section empty without acknowledgment.
 - **Keep it scannable.** Sellers read this 10 minutes before a call. Use headers, bullets, and bold labels consistently. Every line must earn its place.

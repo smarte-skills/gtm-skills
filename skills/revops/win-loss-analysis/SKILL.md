@@ -169,7 +169,9 @@ Data gaps:
 
 ### Mode B — Pattern Analysis
 
-Render in chat as a trends table followed by key findings:
+Render in chat as a trends table followed by key findings.
+Cap key findings to the top 3 most significant patterns — do not surface every signal
+found. Offer to expand if the user wants to go deeper.
 
 ```
 Win/Loss Pattern Analysis — [N] deals · [Date range if available]
@@ -183,7 +185,7 @@ Single-threaded deals         | [%]           | [%]           | [+/- pts]
 Competitor mentioned          | [%]           | [%]           | [+/- pts]
 ```
 
-Followed by key findings in plain language:
+Followed by key findings in plain language (top 3 only):
 
 ```
 Key Findings:
@@ -198,6 +200,9 @@ Where losses are clustering:
 Top recommendation:
 [One specific, high-leverage action for the RevOps or sales team based on the patterns]
 ```
+
+After rendering, offer:
+> "Want me to surface additional patterns from the data, or go deeper on any of these?"
 
 ---
 
