@@ -24,36 +24,19 @@ The brief has two goals:
 
 ## Step 0: Establish Seller Context (Always Run First)
 
-Before building any brief, you need to understand what the seller is selling. This context shapes the entire brief — especially the recommended angle.
+Before building any brief, understand what the seller is selling — this shapes the angle.
 
-### Check memory first:
-Look for stored seller context in memory. This includes:
-- Seller's company name
-- What their product/platform does
-- Who it's built for (ICP)
-- Core pain points it solves
-- Key differentiators or value props
+**Check memory first** for: seller's company name, what the product does, ICP, pain points solved, key differentiators.
 
-### If seller context is found in memory:
-Use it silently. Do not ask the seller to re-enter it. Proceed directly to Step 1.
-If the seller wants to update their product context, they can say "update my product context" or "I've changed what I'm selling" at any time.
+**If found:** Use it silently, proceed to Step 1. Seller can say "update my product context" anytime to refresh it.
 
-### If seller context is NOT found in memory:
-Ask for their website before doing anything else:
+**If not found:** Ask for their website first:
 
 > "Before I build your brief, I need to understand what you're selling. What's your company website? I'll pull the context myself."
 
-Once they provide the URL:
-- Fetch the website
-- Extract and store in memory:
-  - Company name
-  - What the product does (in plain language)
-  - Who it's for (personas, industries, company sizes)
-  - Core problems it solves
-  - Key differentiators or positioning language used
-- Confirm briefly with the seller:
+Fetch the site, extract company name, product description, ICP, pain points solved, and differentiators, then store in memory. Confirm briefly:
 
-> "Got it — you're selling [product summary in 1 sentence]. I'll use this as context for all your call preps going forward. You can update it anytime by saying 'update my product context'."
+> "Got it — you're selling [product summary in 1 sentence]. I'll use this for all your call preps going forward."
 
 Then proceed to Step 1.
 
@@ -61,17 +44,9 @@ Then proceed to Step 1.
 
 ## Step 1: Assess the Call Input
 
-Evaluate what the seller has shared about the call:
+**If ambiguous** (unclear company, prospect, or call purpose) — ask one single clarifying question, e.g. "Who are you getting on the call with — name and title, or just the company?" Never ask more than one at a time; infer the rest and flag gaps in the brief.
 
-### If the input is ambiguous (unclear company, unclear prospect, or unclear call purpose):
-Ask one single clarifying question. Examples:
-- "Who are you getting on the call with — do you have a name and title, or just the company?"
-- "What's the company? I'll build the account brief from there and add contact intel if you have it."
-- "Any context on what this call is about — first discovery, demo, follow-up?"
-
-Do not ask more than one question at a time. Make reasonable inferences on everything else and flag gaps inside the brief.
-
-### Determine brief type based on available input:
+**Brief type by input available:**
 
 | Input Available | Brief Output |
 |---|---|
@@ -85,43 +60,15 @@ Do not ask more than one question at a time. Make reasonable inferences on every
 
 ## Step 2: Research — Gather All Available Intel
 
-Before writing a single line of the brief, gather everything. Work through these sources in order:
+Before writing a single line, gather everything. Work through sources in order:
 
-### 2a. SMARTe MCP (if connected)
-Pull proactively — do not wait to be asked:
-- Account firmographics: industry, headcount, revenue range, HQ location, company stage
-- Technographics: current tech stack, tools in use — look for signals relevant to seller's product category
-- Contact details: verified title, tenure at company, seniority level, reporting structure, email/mobile if available
-- Org signals: recent leadership hires, team expansions, department-level headcount changes
-- Buying signals: any intent data or engagement signals available
+**SMARTe MCP (if connected)** — pull proactively: account firmographics (industry, headcount, revenue, HQ, stage), technographics relevant to the seller's product category, contact details (title, tenure, seniority, reporting line, email/mobile), org signals (leadership hires, team expansion), and any intent/buying signals. Use as primary source of truth; supplement with web research below.
 
-Use SMARTe data as the primary source of truth. Supplement with web research below.
+**Web Research (always run, selectively use)** — search for recent funding, leadership changes, product launches, market expansion, notable press or customer wins, and active job postings that signal priorities (e.g., hiring SDRs = building outbound = pipeline priority). **Critical rule:** only include findings genuinely relevant to the call. Ask "would a seller actually use this?" If no, cut it. An empty signals section beats a forced one.
 
-### 2b. Web Research (always run, selectively use)
-Run a focused web search on the company. Look specifically for:
-- Recent funding rounds or valuation news
-- Leadership changes (new CXO, new VP of relevant function)
-- Product launches or major announcements
-- Expansion into new markets or geographies
-- Notable press, partnerships, or customer wins
-- Active job postings that signal priorities (e.g., hiring 10 SDRs = building outbound = pipeline is a priority)
-- Any industry headwinds or tailwinds affecting their space right now
+**CRM MCP (if connected)** — pull prior conversations, open/closed opportunities, last touchpoint, noted objections or preferences, and current deal stage. Fold this into "Why This Call, Why Now" and "Watch Out For" naturally.
 
-**Critical rule:** Only include findings that are genuinely relevant to the sales conversation. Ask yourself: "Would a seller actually use this on the call?" If the answer is no, cut it. Do not force signals. An empty signals section is better than a weak one.
-
-### 2c. CRM MCP (if connected — HubSpot, Salesforce, or other)
-Pull existing account and deal data:
-- Prior conversations and meeting notes
-- Open or closed opportunities
-- Last touchpoint — when, what channel, what was discussed
-- Any noted objections, preferences, or sensitivities
-- Current deal stage if applicable
-- Which team members at the seller's org have touched this account
-
-Fold all of this into the brief naturally — especially into "Why This Call, Why Now" and "Watch Out For."
-
-### 2d. Seller-provided context
-Treat everything the seller shared — LinkedIn snippets, email threads, CRM copy-pastes, website URLs — as additional signal. Extract anything useful and incorporate it.
+**Seller-provided context** — treat anything shared (LinkedIn snippets, email threads, CRM pastes, URLs) as additional signal and incorporate it.
 
 ---
 
@@ -135,43 +82,39 @@ This is the strategic layer of the brief. Before writing sections, reason throug
 What does the seller's product actually do? What problem does it solve? What's the core value prop? (From memory — established in Step 0)
 
 **Input 2 — Prospect's industry:**
-What are the typical pain points, buying triggers, and sensitivities for this vertical right now? How does this industry typically buy? What language resonates?
+What are the typical pain points, buying triggers, and language for this vertical?
 
-Map the seller's product to industry-specific language:
-- **SaaS / Tech:** Speed, pipeline velocity, rep productivity, integration with existing stack
-- **Fintech / Financial Services:** Data accuracy, compliance, risk reduction, audit trails
-- **Logistics / Supply Chain:** Ops efficiency, territory coverage, field team visibility
-- **Healthcare:** Workflow automation, compliance, patient outcomes, cost per acquisition
-- **Retail / E-commerce:** Customer acquisition cost, retention, conversion
-- **Manufacturing / Industrial:** Operational uptime, field service efficiency, procurement
-- *(Adapt for any industry based on available context)*
+| Industry | What resonates |
+|---|---|
+| SaaS / Tech | Speed, pipeline velocity, rep productivity, stack integration |
+| Fintech / Financial Services | Data accuracy, compliance, risk reduction, audit trails |
+| Logistics / Supply Chain | Ops efficiency, territory coverage, field visibility |
+| Healthcare | Workflow automation, compliance, patient outcomes, CAC |
+| Retail / E-commerce | CAC, retention, conversion |
+| Manufacturing / Industrial | Uptime, field service efficiency, procurement |
+
+*(Adapt for any industry not listed based on available context.)*
 
 **Input 3 — Prospect's persona:**
-What is this person measured on? How do they think about problems? What does winning look like for them?
+What is this person measured on? What does winning look like for them?
 
-Map the seller's product to persona-specific value:
-- **CEO / Founder:** Revenue impact, competitive advantage, strategic leverage
-- **CRO / VP Sales:** Pipeline, quota attainment, rep ramp time, forecast accuracy
-- **CMO / VP Marketing:** Lead quality, attribution, CAC, brand
-- **CFO / VP Finance:** ROI, cost reduction, budget justification, risk
-- **CTO / VP Engineering:** Integration complexity, scalability, security, technical debt
-- **COO / VP Operations:** Process efficiency, headcount leverage, error reduction
-- **Head of HR / People:** Talent acquisition, retention, compliance, employee experience
-- *(Adapt for any persona based on their title and scope)*
+| Persona | What they're measured on |
+|---|---|
+| CEO / Founder | Revenue impact, competitive advantage, strategic leverage |
+| CRO / VP Sales | Pipeline, quota attainment, rep ramp time, forecast accuracy |
+| CMO / VP Marketing | Lead quality, attribution, CAC, brand |
+| CFO / VP Finance | ROI, cost reduction, budget justification, risk |
+| CTO / VP Engineering | Integration complexity, scalability, security |
+| COO / VP Operations | Process efficiency, headcount leverage, error reduction |
+| Head of HR / People | Talent acquisition, retention, employee experience |
 
-**Input 4 — Signals found:**
-Does anything discovered in Step 2 sharpen or shift the angle? A company that just raised Series B = growth angle. A company that just had a leadership change = new priorities angle. A company actively hiring in the relevant function = timing angle.
+*(Adapt for any persona not listed based on title and scope.)*
 
-**Input 5 — Call stage:**
-- First discovery call → curiosity-led, problem-exploration angle
-- Demo call → value-proof angle, tie features to their specific pains
-- Follow-up / negotiation → ROI and risk-reduction angle, address known objections
+**Input 4 — Signals found:** Does anything from Step 2 sharpen the angle? Funding = growth angle. Leadership change = new priorities angle. Active hiring = timing angle.
 
-### Output: Recommended Angle
-From the above, derive:
-1. **The primary angle** — one clear framing for the entire conversation
-2. **The opening hook** — how to frame the first 60 seconds
-3. **What to avoid leading with** — what would fall flat or create resistance for this specific persona and company
+**Input 5 — Call stage:** Discovery → curiosity-led. Demo → value-proof, tied to specific pains. Follow-up → ROI and risk-reduction, addressing known objections.
+
+**Output:** From the above, derive the primary angle, the opening hook, and what to avoid leading with.
 
 ---
 
@@ -314,18 +257,14 @@ Produce the brief in this exact structure. Every section must be specific to thi
 
 ## Rules — Non-Negotiable
 
-- **Scale output to context.** The depth of every section must match what's actually known. A seller who shares a name and company gets a tight, honest brief. A seller who shares a LinkedIn profile, CRM notes, and call history gets a fuller one. Never pad sections to fill a template — if the intel isn't there, flag the gap in one line and move on. A brief that is half gaps is better than a brief full of filler.
-- **Discovery questions scale to call complexity.** Standard calls get 4-5 questions. Complex multi-stakeholder calls or late-stage deals get up to 6. Never write 6-8 questions for a simple first discovery call — it reads as generated, not researched.
-- **Angle section scales to available context.** If context is thin, the angle is one clear sentence plus a single note on what to avoid. The full 6-field angle block is only warranted when enough is known about the prospect, their company, and their priorities to make each field genuinely specific.
-- **Never fabricate.** Do not invent headcount, revenue, funding rounds, tech stack, contact details, or signals. If it isn't from the seller's input, SMARTe, CRM, or a verifiable web source — do not include it.
-- **Flag every gap cleanly.** If a field can't be filled from available context, write: *Not enough context — ask during the call.* Never leave a section empty without acknowledgment.
-- **Keep it scannable.** Sellers read this 10 minutes before a call. Use headers, bullets, and bold labels consistently. Every line must earn its place.
-- **No filler.** Never write things like "this company is a leader in their space", "they are focused on innovation", or "they value partnerships." If it could apply to any company, cut it.
-- **Signals only when real.** Do not force recent news or signals. A missing signals section is better than a weak one.
-- **Role-specific questions always.** A CFO call looks nothing like a Head of Sales call. Discovery questions must reflect the actual title, function, and seniority.
-- **Angle must be product-informed.** The recommended angle must connect the seller's specific product to this specific prospect's industry and persona. It cannot be generic positioning advice.
-- **Respect call stage.** A first discovery call, a demo, and a follow-up are entirely different conversations. Adjust tone, questions, angle, and next step accordingly.
-- **Memory first.** Always check memory for seller product context before asking. Never ask the seller to re-explain what they sell if it's already stored.
+- **Scale output to context.** Depth must match what's actually known. Thin input gets a tight, honest brief with gaps flagged in one line — never padded to fill a template. The Angle block's full 6 fields are only warranted when enough is known to make each one genuinely specific; thin context gets one clear sentence plus a note on what to avoid.
+- **Discovery questions scale to complexity.** 4-5 for standard calls, up to 6 for complex multi-stakeholder ones. More than that reads as generated, not researched.
+- **Never fabricate.** No invented headcount, revenue, funding, tech stack, contacts, or signals. If it isn't from the seller, SMARTe, CRM, or a verifiable source — leave it out.
+- **No filler.** Cut anything that could apply to any company ("a leader in their space", "focused on innovation").
+- **Signals only when real.** A missing signals section beats a weak one.
+- **Role-specific questions always.** A CFO call looks nothing like a Head of Sales call.
+- **Respect call stage.** Discovery, demo, and follow-up are different conversations — adjust tone, questions, angle, and next step accordingly.
+- **Memory first.** Never ask the seller to re-explain what they sell if it's already stored.
 
 ---
 

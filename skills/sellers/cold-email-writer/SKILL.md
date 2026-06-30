@@ -22,38 +22,15 @@ You know that most cold emails fail because they sound like cold emails. Your jo
 
 ## Step 0: Assemble All Available Context (Always Run First)
 
-Before writing a single word, pull everything already known. Never ask for something you already have.
+**Check memory for:** seller's company/product, ICP and value props, any previously stored prospect details, any prior Pre-Call Intelligence brief for this prospect (use it fully if it exists), and any prior tone preferences.
 
-### Check memory for:
-- Seller's company name and product description
-- Seller's ICP and core value props
-- Any previously stored prospect details — name, title, company, role priorities
-- Any prior Pre-Call Intelligence brief run for this prospect — if it exists, use it fully. Do not ask the seller to repeat what was already researched.
-- Any previously used email tone preferences or style notes
-
-### Evaluate what you have vs. what you need:
-
-| Available | Action |
-|---|---|
-| Seller product context in memory | Use silently — do not ask |
-| Prior Pre-Call Brief for this prospect | Pull and use as full research context |
-| Prospect name + title + company | Proceed to research |
-| Prospect title + industry only (no name) | Proceed — write to persona, personalise to company/industry |
-| No prospect context at all | Ask one question before proceeding |
-
-### If prospect context is missing or thin:
-Ask one focused question before doing anything else:
+**If prospect context is missing or thin** — ask one question before proceeding:
 
 > "Who are you reaching out to? Even a name, title, and company — or just a title and industry — gives me enough to make this feel personal."
 
-If the seller shares additional context beyond what's in memory — a LinkedIn note, a signal they spotted, a prior email thread, a specific angle they want to test — absorb it all before proceeding.
+Absorb anything else the seller shares (a LinkedIn note, a signal, a prior thread) before proceeding.
 
-### If seller product context is not in memory:
-Ask for their website first:
-
-> "I don't have your product context saved yet. What's your company website? I'll pull it myself."
-
-Fetch, extract, store in memory, confirm with the seller, then proceed. Same process as Pre-Call Intelligence skill.
+**If seller product context is not in memory** — ask for their website first, fetch, extract, store, confirm, then proceed. Same process as Pre-Call Intelligence.
 
 ---
 
@@ -107,38 +84,16 @@ Do not default to the same framework every time. Reason about which frameworks g
 
 ### Framework library — reason about fit, do not rotate mechanically:
 
-**Signal-led**
-Open directly with a specific, observed trigger. Connect it to the problem that trigger implies. Then to your product.
-Best for: Strong hook exists. Funding, hiring, leadership change, product launch.
-Structure: [Trigger observation] → [What that implies about their world] → [How you help with that] → [CTA]
+| Framework | Structure | Best for |
+|---|---|---|
+| **Signal-led** | Trigger observation → what it implies → how you help → CTA | Strong hook exists: funding, hiring, leadership change, product launch |
+| **Insight-led** | Surprising/reframed insight → why it matters for them → how you help → CTA | No strong hook. Established pain. Senior persona who gets a lot of outreach |
+| **PAS** | Problem → cost of the problem → solution → CTA | Known, felt pain. Mid-level persona. Clearly named problem |
+| **Pattern Interrupt** | Disruptive opener → quick pivot to relevance → tight value prop → CTA | Very senior prospects. High-volume inboxes |
+| **Social Proof-led** | Specific customer outcome at a similar company → relevance → brief on what you do → CTA | Sceptical buyers. Established category |
+| **Curiosity / Question-led** | One precise question → why it matters → what you do → CTA | Intellectually engaged prospects. Emerging category |
 
-**Insight-led**
-Open with a non-obvious observation about their industry, role, or a pattern you've seen. Something that makes them think "huh, that's true." Then connect to your product.
-Best for: No strong hook. Established pain point. Senior persona who gets a lot of outreach.
-Structure: [Surprising or reframed insight] → [Why it matters for them specifically] → [How you help] → [CTA]
-
-**PAS (Problem, Agitate, Solution)**
-Name the problem directly. Make the cost of the problem concrete and real. Then present the solution briefly.
-Best for: Known, felt pain. Mid-level persona. Product that solves a clear, named problem.
-Structure: [Problem] → [What it costs them / why it's worse than they think] → [What you do about it] → [CTA]
-
-**Pattern Interrupt**
-Unconventional opening designed to stop the scan. Could be a direct question, a counterintuitive statement, or an unusually short opener. Earns attention before earning interest.
-Best for: Very senior prospects. High-volume inboxes. When every other email they get sounds the same.
-Structure: [Disruptive opener] → [Quick pivot to relevance] → [Tight value prop] → [CTA]
-
-**Social Proof-led**
-Open with a specific, relevant customer result. Not a logo drop — a concrete outcome at a company similar to theirs.
-Best for: Sceptical buyers. Established product category. When the prospect's peer success is the strongest signal.
-Structure: [Specific customer outcome at a similar company] → [Why that's relevant to their situation] → [Brief on what you do] → [CTA]
-
-**Curiosity / Question-led**
-Open with a single, precise question that the prospect genuinely doesn't know the answer to — or hasn't thought about in the way you're framing it.
-Best for: Prospects who are intellectually engaged. Emerging category where the problem isn't fully named yet.
-Structure: [One precise question] → [Brief context on why it matters] → [What you do] → [CTA]
-
-### Select the top 2 frameworks for this context. Build one variant per framework.
-Add a third variant only if there is a genuinely distinct angle — not just a tonal variation of the same structure.
+Select the top 2 frameworks for this context. Build one variant per framework. Add a third only if there is a genuinely distinct angle — not a tonal variation of the same structure.
 
 ---
 
@@ -148,46 +103,21 @@ For each selected framework, produce a complete email. Every variant must meet e
 
 ### Email writing standards — non-negotiable:
 
-**Length:**
-- Under 150 words. Every sentence must justify its existence.
-- If a sentence doesn't move the reader closer to replying — cut it.
+**Length:** Under 150 words. Every sentence must justify its existence — if it doesn't move the reader closer to replying, cut it.
 
-**Subject line:**
-- Specific, not clever. The goal is an open, not a smile.
-- Never: "Quick question", "Touching base", "Synergy opportunity"
-- Yes: References something real — a signal, a result, a question, a name
+**Subject line:** Specific, not clever. Never "Quick question," "Touching base," "Synergy opportunity." Reference something real — a signal, a result, a question, a name.
 
-**Opening line:**
-- Must be specific to this person or company. No generic openers under any circumstances.
-- Never start with "I", "My name is", "I hope", "I wanted to reach out", "I came across your profile"
-- The opening line is the hook — it earns the next line
+**Opening line:** Specific to this person or company, no exceptions. Never start with "I," "My name is," "I hope," "I wanted to reach out," "I came across your profile." The opening line is the hook — it earns the next line.
 
-**Body:**
-- One problem or insight. One product connection. No feature lists.
-- Write in short sentences. Real words. The way a sharp professional actually composes an email.
-- Never explain too much. Leave something for the conversation.
+**Body:** One problem or insight, one product connection, no feature lists. Short sentences, real words — the way a sharp professional actually writes. Never explain too much; leave something for the conversation.
 
-**CTA:**
-- One ask. Specific and low-friction.
-- Not: "Let me know if you're interested" or "Would love to connect sometime"
-- Yes: "Worth a 20-minute call this week?" or "Open to a quick conversation on Thursday?"
+**CTA:** One ask, specific and low-friction. Not "Let me know if you're interested." Yes: "Worth a 20-minute call this week?"
 
-**Tone:**
-- Default: concise, direct, peer-to-peer — one professional writing to another
-- Not a vendor pitching a buyer. Not overly warm. Not formal.
-- Adjustable by seller request — but see tone guardrail below
+**Tone:** Default concise, direct, peer-to-peer — one professional writing to another. Not a vendor pitching a buyer. Adjustable by request — see tone guardrail below.
 
 ### Banned words and patterns — never appear in any email variant:
 
-**Phrases:**
-- "I hope this finds you well" / "I hope you're doing well"
-- "I wanted to reach out" / "I'm reaching out because"
-- "I'd love to..." / "Would love to connect"
-- "Touch base" / "Circle back" / "Loop in"
-- "As per" / "Please find" / "Kind regards" (unless seller's industry norms require it)
-- "Just checking in" / "Following up on my last email" (this is a sequence follow-up, not a cold opener)
-- "I came across your profile and was impressed"
-- "I think we could really help you"
+**Phrases:** "I hope this finds you well," "I wanted to reach out," "I'd love to...," "Touch base" / "Circle back" / "Loop in," "As per" / "Please find," "Just checking in" / "Following up on my last email," "I came across your profile and was impressed," "I think we could really help you."
 
 **Words:**
 - Leverage (as a verb)

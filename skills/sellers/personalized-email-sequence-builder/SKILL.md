@@ -24,37 +24,15 @@ You also understand that a sequence is not just emails. It is a campaign — wit
 
 ## Step 0: Assemble All Available Context (Always Run First)
 
-Before designing or writing anything, pull everything already known. Never ask for something you already have.
+**Check memory for:** seller's product/ICP, any prior Pre-Call Intelligence brief for this prospect, any cold email already written via Cold Email Writer, prior tone preferences, and any signals/hooks already identified.
 
-### Check memory for:
-- Seller's company name, product description, and core value props
-- Seller's ICP definition — target personas, industries, company sizes
-- Any prior Pre-Call Intelligence brief run for this prospect — pull and use fully
-- Any cold email already written via the Cold Email Writer skill for this prospect
-- Any previously noted tone preferences or sequence parameters
-- Any signals, hooks, or angles already identified for this prospect
+**If a cold email already exists for this prospect:** Use it as Email 1 — don't rewrite or ignore it. Confirm: "I'll use the cold email I wrote for [Prospect Name] as Email 1 and build the rest from there. Keep the same tone throughout, or evolve it as the sequence warms?"
 
-### Determine the starting point:
+**If no cold email exists:** Email 1 is written fresh as the cold opener, applying all Cold Email Writer standards.
 
-**If a cold email already exists for this prospect (written via Skill 3):**
-Use it as Email 1. Do not rewrite it. Do not ignore it. Confirm with the seller before proceeding:
+**If prospect context is thin:** Ask one question: "Who is this sequence for? A name, title, and company — or just a title and industry — gives me enough to make every email feel personal."
 
-> "I'll use the cold email I wrote for [Prospect Name] as Email 1 and build the rest of the sequence from there. Want me to keep the same tone throughout, or evolve the tone as the sequence progresses and the relationship warms?"
-
-**If no cold email exists:**
-The sequence starts from scratch. Email 1 will be written as the cold opener — apply all Cold Email Writer standards to it (see Step 4).
-
-**If prospect context is thin or missing:**
-Ask one focused question before proceeding:
-
-> "Who is this sequence for? A name, title, and company — or even just a title and industry — gives me enough to make every email feel personal."
-
-**If seller product context is not in memory:**
-Ask for their website first:
-
-> "I don't have your product context saved yet. What's your company website? I'll pull it myself."
-
-Fetch, extract, store in memory, confirm, then proceed.
+**If seller product context is missing:** Ask for their website, fetch, extract, store, confirm, then proceed.
 
 ---
 
@@ -62,159 +40,83 @@ Fetch, extract, store in memory, confirm, then proceed.
 
 Before writing a single email, define the full sequence architecture and confirm it with the seller. Do not write any emails until the architecture is approved — this prevents generating a full sequence the seller then wants to restructure.
 
-### Present the architecture first:
+Present the length, rationale, and a one-line-per-touch arc for confirmation:
 
-After completing Step 0, present the following for seller confirmation before writing:
+> "Here's the sequence I'd build for [Prospect Name]: **[N] touchpoints over [X] days** — [rationale]. Touch 1 (Day 1): [job + angle]. Touch 2 (Day 2-3): [job]. [...continue for all touches]. Breakup (Day X): the easy out. Good to build this out, or adjust first?"
 
-> "Here's the sequence I'd build for [Prospect Name]:
->
-> **Length:** [N] touchpoints over [X] days — [one sentence rationale]
->
-> **Arc:**
-> - Touch 1 (Day 1): [Strategic job + one line on the angle]
-> - Touch 2 (Day 2-3): [LinkedIn / strategic job]
-> - Touch 3 (Day 4-5): [Strategic job + one line on the angle]
-> - Touch 4 (Day 8-10): [Strategic job + one line on the angle]
-> - [Continue for all touches]
-> - Breakup (Day X): The easy out
->
-> Good to build this out, or want to adjust anything first?"
-
-Wait for confirmation before writing. If the seller wants changes — adjust the architecture, re-present, then build. This one step prevents generating 10+ pages the seller then wants to restructure entirely.
+Wait for confirmation. If the seller wants changes, adjust and re-present before building.
 
 ### 1a. Recommend sequence length based on context:
 
 | Scenario | Recommended Length |
 |---|---|
-| Truly cold prospect, no signal, no prior engagement | 5 emails + breakup (6 total) |
-| Cold prospect with a strong signal (funding, hiring, leadership change) | 4 emails + breakup (5 total) |
-| Warm prospect — post-event, post-content engagement, prior conversation | 3 emails + breakup (4 total) |
-| Re-engagement — prospect went cold after prior conversation | 3 emails + breakup (4 total) |
+| Truly cold, no signal, no prior engagement | 5 emails + breakup (6 total) |
+| Cold with a strong signal (funding, hiring, leadership change) | 4 emails + breakup (5 total) |
+| Warm — post-event, post-content, prior conversation | 3 emails + breakup (4 total) |
+| Re-engagement — went cold after prior conversation | 3 emails + breakup (4 total) |
 
-Always state the recommended length and the reasoning before proceeding. The seller can override:
-
-> "Based on [context], I'd recommend a [N]-email sequence. Want me to adjust the length before I build it out?"
+State the recommendation and reasoning; seller can override.
 
 ### 1b. Define the strategic job of every touchpoint:
 
-Every email in the sequence must have a distinct, named job. No two emails share the same job. If they do — one of them needs to be cut or reimagined.
+Every email must have a distinct, named job. No two share the same job — if they do, cut or reimagine one.
 
-**Standard sequence architecture:**
-
-| Touch | Strategic Job | Primary Channel | Timing |
+| Touch | Strategic Job | Channel | Timing |
 |---|---|---|---|
-| Email 1 | The Hook — earn attention with a specific, personalised opener. Establish who you are and why you're relevant in one read. | Email | Day 1 |
-| LinkedIn Touch | Presence building — send a connection request with a short, no-pitch note. Do not mention the email. Just be a recognisable name. | LinkedIn | Day 2-3 |
-| Email 2 | The Different Angle — new insight, new pain point, or a relevant social proof story. Never reference Email 1. Stand entirely alone. | Email | Day 4-5 |
-| Email 3 | The Value Add — give something useful without asking for anything. A relevant data point, a short insight, a case study result, a question worth thinking about. No pitch. No CTA asking for a meeting. | Email | Day 8-10 |
-| LinkedIn Touch | Warm the relationship — if the prospect has posted publicly, leave a genuine comment. Not about your product. Just be present and relevant. | LinkedIn | Day 10-12 |
-| Email 4 | The Frame Shift — change the angle entirely. Challenge an assumption they likely hold. Reframe the problem from a different direction. This email is for the prospect who has read the others but hasn't responded — give them a new reason to. | Email | Day 14-16 |
-| Call Attempt | Direct outreach — if no response to Emails 1-4, a brief, well-framed call attempt is warranted. The sequence has built enough context to justify it. | Phone | Day 16-18 |
-| Email 5 | Gentle Urgency — a concrete, honest reason why now is a good time to connect. Not artificial scarcity. Not pressure. A real reason tied to their context — a signal, a timing window, a relevant change. | Email | Day 20-22 |
-| Breakup Email | The Easy Out — low pressure, short, gives them a graceful exit. Closes the loop. Often the highest-reply email in the entire sequence because the prospect finally feels safe to respond. | Email | Day 25-28 |
+| Email 1 | The Hook — earn attention with a specific, personalised opener | Email | Day 1 |
+| LinkedIn | Presence building — connection request, no pitch, no mention of the email | LinkedIn | Day 2-3 |
+| Email 2 | The Different Angle — new insight or social proof, never references Email 1 | Email | Day 4-5 |
+| Email 3 | The Value Add — something useful, no pitch, no meeting CTA | Email | Day 8-10 |
+| LinkedIn | Relationship Warm — genuine comment on a real post, never about the product | LinkedIn | Day 10-12 |
+| Email 4 | The Frame Shift — challenge an assumption they likely hold | Email | Day 14-16 |
+| Call | Direct outreach — brief, well-framed attempt after 4 emails with no reply | Phone | Day 16-18 |
+| Email 5 | Gentle Urgency — a real, honest reason why now matters | Email | Day 20-22 |
+| Breakup | The Easy Out — short, low-pressure, graceful exit. Often the highest-reply email in the sequence | Email | Day 25-28 |
 
-**For shorter sequences (4-5 touchpoints), collapse the architecture:**
-- Drop Email 5 (urgency) and go straight from Frame Shift to Breakup
-- Keep LinkedIn touches as suggestions — they remain valuable regardless of sequence length
-- Keep the Value Add (Email 3) — it is the most underused and most effective touchpoint in any sequence
+**For shorter sequences (4-5 touchpoints):** drop Email 5 and go straight from Frame Shift to Breakup. Keep LinkedIn touches as suggestions regardless of length. Keep the Value Add — it's the most underused, most effective touchpoint in any sequence.
 
 ### 1c. Define the narrative arc:
 
-Before writing, state the arc in one paragraph. This gives the sequence a spine — a logical reason why each email follows the previous one, even though they never reference each other.
-
-Example arc structure:
-- Email 1: Establish relevance through a specific signal or insight
-- Email 2: Deepen the problem from a different angle — show you understand their world
-- Email 3: Demonstrate value without asking for anything — build trust
-- Email 4: Challenge their current thinking — create a reason to reconsider
-- Email 5: Create a reason why now is the right time
-- Breakup: Give them a graceful exit — which often becomes an entry
-
-The arc must be specific to this prospect and this seller's product. A generic arc is a symptom of a generic sequence.
+State the arc in one paragraph before writing — the logical reason each email follows the last, even though they never reference each other. The arc must be specific to this prospect and product; a generic arc produces a generic sequence.
 
 ---
 
 ## Step 2: Channel Touch Recommendations
 
-The sequence is primarily email — but channel touches between emails build name recognition and warm the relationship before the next email lands. Include these as recommendations in the sequence output, not as emails the skill writes.
+The sequence is primarily email — channel touches between emails build presence without pressure. Include these as recommendations, not as content the skill writes in full.
 
-### LinkedIn Connection Request (after Email 1, Day 2-3):
-Suggest a short connection request note. Rules:
-- No pitch. No mention of the email sent.
-- Reference something real — their work, a post, a shared connection, their company
-- Under 300 characters (LinkedIn limit)
-- Sounds human, not templated
+**LinkedIn Connection Request (after Email 1, Day 2-3):** Suggest a short note — no pitch, no mention of the email, references something real about their work or company, under 300 characters, sounds human. E.g., *"[Something specific about their work or company]. Thought it worth connecting."*
 
-Provide a suggested note alongside the recommendation. Example format:
-> *LinkedIn touch suggestion (Day 2-3): Send a connection request with a short note. Something like: "[Something specific about their work or company]. Thought it worth connecting." No mention of your email — just build presence.*
+**LinkedIn Engagement (after Email 3, Day 10-12):** If the prospect posts publicly, suggest a genuine comment that adds something — never about the product, never "Great post!" If they're not active on LinkedIn, skip this touch entirely.
 
-### LinkedIn Engagement (after Email 3, Day 10-12):
-If the prospect posts publicly on LinkedIn, suggest leaving a genuine comment on something relevant. Rules:
-- Must be a real comment that adds something — an observation, a follow-up question, an agreement with nuance
-- Never about the seller's product
-- Never "Great post!" or any hollow engagement
-- If the prospect hasn't posted recently or doesn't post publicly — skip this touch entirely
-
-### Call Attempt (after Email 4, Day 16-18):
-Suggest a brief call attempt after four emails with no response. Provide:
-- A suggested voicemail script (under 20 seconds)
-- A suggested opening line if they pick up
-- Both must reference something specific — not "I've been trying to reach you"
+**Call Attempt (after Email 4, Day 16-18):** Provide a voicemail script (under 20 seconds) and an opening line if they pick up. Both reference something specific — never "I've been trying to reach you."
 
 ---
 
 ## Step 3: Write Every Email
 
-Apply all writing standards from the Cold Email Writer skill to every email in this sequence without exception. Every email is held to the same bar as a standalone cold email.
+Apply all writing standards from the Cold Email Writer skill to every email without exception — held to the same bar as a standalone cold email.
 
-### Sequence-specific writing rules — in addition to all Cold Email Writer standards:
+**Subject lines:** Each unique, earns an open on its own merits. Never "Re: [previous subject]" except as a deliberate, judgment-based choice in the breakup. Subject lines should not signal they're part of a sequence.
 
-**Subject lines:**
-- Every email has its own unique subject line
-- Never use "Re: [previous subject]" except as a deliberate strategic choice in the breakup email (and only if it makes the breakup feel more personal — use judgment)
-- Subject lines should not form a series or signal they are part of a sequence
-- Each subject line earns an open on its own merits
+**Opening lines:** No email references the previous one. "Following up," "just checking in," "circling back," "wanted to follow up" — all banned. Each email opens as if it's the first contact, with a different angle each time.
 
-**Opening lines:**
-- No email starts by referencing the previous email
-- "Following up on my last email" is banned in every form — "just checking in", "circling back", "wanted to follow up" — all banned
-- Each email opens as if it is the first contact — but with a different angle, a different hook, a different reason to read
+**Email 3 (Value Add):** Zero pitch, zero meeting CTA. Give something genuinely useful — a stat, a short insight, a case study result, a question worth sitting with. Only allowed CTA: a low-pressure invitation like "Curious if this resonates with what you're seeing." This is the most underused, most powerful touchpoint — it builds trust by asking for nothing.
 
-**The Value Add email (Email 3) — special rules:**
-- Zero pitch. Zero CTA asking for a meeting or call.
-- Give something genuinely useful: a relevant statistic, a short insight, a one-paragraph case study result, a question worth sitting with
-- The only CTA allowed: "Curious if this resonates with what you're seeing" or a similarly low-pressure invitation to respond
-- This email builds trust by asking for nothing. It is the most underused and most powerful touchpoint.
+**Email 4 (Frame Shift):** Must challenge something the prospect likely believes. Written with confidence, not aggression — the goal is "hm, I haven't looked at it that way," not a lecture. Short, direct, one idea.
 
-**The Frame Shift email (Email 4) — special rules:**
-- Must challenge something the prospect likely believes or assumes
-- Must be written from a position of confidence — not aggression, but clarity
-- The goal is to make the prospect think "hm, I haven't looked at it that way" — not to lecture them
-- Short. Direct. One idea, executed with precision.
+**Breakup email:** 80-100 words maximum. Tone shifts warmer and more human. Gives a genuine, graceful exit — never "I'll never contact you again" or anything passive-aggressive. Yes: "If the timing isn't right, completely understand — happy to reconnect whenever it makes sense." Often restates the core value prop in one sentence in case earlier emails were never read.
 
-**The Breakup email — special rules:**
-- Shortest email in the sequence: 80-100 words maximum
-- Tone shifts slightly — warmer, more human, less structured
-- Gives the prospect a genuine, graceful exit — not a guilt trip disguised as a breakup
-- Never: "I'll never contact you again" or "I guess you're not interested" — these are passive aggressive
-- Yes: "If the timing isn't right, completely understand — happy to reconnect whenever it makes sense"
-- The one place where "Re: [original subject]" as a subject line can work — it signals this is the last email without saying so
-- Often includes a soft restatement of the core value prop in one sentence — in case they never read the earlier emails
-
-### Banned words, phrases, and patterns — apply to every email:
-All banned words, phrases, and punctuation from the Cold Email Writer skill apply here in full — including the complete prohibition on em dashes (—) in any form. Every email in this sequence is held to the same standard as a standalone cold email. If in doubt: if it sounds like a cold email template, rewrite it.
+**Banned words, phrases, punctuation:** All rules from Cold Email Writer apply in full, including the complete em dash (—) prohibition. If it sounds like a cold email template, rewrite it.
 
 ### Self-check before presenting any email:
-Run this check on every email in the sequence before showing it to the seller. Rewrite any that fail.
-
-- [ ] Does the opening line reference something specific — and different from every other email in the sequence?
-- [ ] Does this email contain any banned words, phrases, or an em dash?
-- [ ] Does any sentence reference a previous email in the sequence?
-- [ ] Is the email under 150 words (breakup under 100)?
-- [ ] Is there exactly one CTA — and is it appropriate for this touchpoint's strategic job?
-- [ ] Could this email stand alone — read by someone who hasn't seen the others — and still make sense?
-- [ ] Does this email bring something new that no other email in the sequence already said?
-- [ ] Does it sound like a human wrote it in under 10 minutes?
+- [ ] Opening line specific and different from every other email in the sequence?
+- [ ] Any banned words, phrases, or em dash?
+- [ ] Does it reference a previous email?
+- [ ] Under 150 words (breakup under 100)?
+- [ ] Exactly one CTA, appropriate for this touchpoint's job?
+- [ ] Could it stand alone, read with no other context, and still make sense?
+- [ ] Does it bring something genuinely new vs. the rest of the sequence?
 
 ---
 
@@ -350,63 +252,49 @@ Present the complete sequence in this exact structure:
 
 ### Sequence Recommendations
 
-**Timing notes:**
-[Any specific timing adjustments based on this prospect's industry, seniority, or context. E.g., "VP-level prospects often read email early morning — consider scheduling sends for 7-8am their timezone." Or "Avoid Friday sends for financial services prospects."]
+**Timing notes:** [Industry/seniority-based adjustments — e.g., "VP-level prospects read early morning, schedule sends 7-8am their timezone."]
 
-**If they reply at any stage:**
-[Clear guidance on what to do when the prospect responds — at each stage. E.g., "Reply after Email 1 or 2: high intent, move to booking a call immediately. Reply after Email 3 (Value Add): they're engaging — respond with a light ask for a conversation. Reply to the breakup: often a 'not now' — acknowledge it, ask when to reconnect, set a reminder."]
+**If they reply:** [Reply after Email 1-2 = high intent, move to booking a call. Reply after Email 3 (Value Add) = engaging, respond with a light ask. Reply to the breakup = often "not now" — acknowledge, ask when to reconnect, set a reminder.]
 
-**If they engage but don't reply (opens, clicks):**
-[What multiple opens or link clicks signal and whether to accelerate the sequence]
+**If they engage but don't reply (opens/clicks):** [What this signals and whether to accelerate.]
 
-**When to pause the sequence:**
-[Clear rules for when to stop sending. E.g., "If they reply at any point — pause immediately and respond personally. Do not let the sequence continue running after a reply."]
+**When to pause:** If they reply at any point — pause immediately and respond personally. Never let the sequence keep running after a reply.
 
-**When to archive and move on:**
-[One sentence. E.g., "If no response after the full sequence, mark as 'not in market' and set a 90-day re-engagement reminder — do not send more cold outreach to this contact in the near term."]
+**When to archive:** No response after the full sequence — mark "not in market," set a 90-day re-engagement reminder, don't send more cold outreach in the near term.
 
 ---
 
 ## Rules — Non-Negotiable
 
-- **Every email is held to the same standard as a standalone cold email.** Sequence emails are not allowed to be lazier just because they are follow-ups.
-- **No email references a previous email.** Ever. In any form. Each email stands alone.
-- **No banned words, phrases, or em dashes.** In any email. Run the self-check on every touchpoint before presenting.
-- **Every touchpoint has a distinct strategic job.** If two emails are doing the same job — one needs to be cut or reimagined.
-- **The breakup email is always included.** It is not optional. It is often the most effective email in the sequence.
-- **Channel touches are suggestions, not emails.** The skill recommends them with specific guidance but does not write LinkedIn posts or call scripts beyond what is specified above.
-- **Memory first.** Never ask for context already stored. Never rewrite a cold email that was already produced by Skill 3 — use it as Email 1.
-- **Show the reasoning.** Strategic job, why this works, and the arc overview are always included. Sellers learn to build better sequences when they understand the logic.
-- **Make a recommendation.** Tell the seller which emails are strongest, what to watch for, and how to handle responses. Never just deliver and disappear.
+- **Every email held to the same standard as a standalone cold email.** No laziness because it's a follow-up.
+- **No email references a previous one.** Each stands alone. No banned words, phrases, or em dashes — run the self-check on every touchpoint.
+- **Every touchpoint has a distinct strategic job.** Two emails doing the same job means one needs to be cut.
+- **Breakup email always included.** Not optional — often the most effective email in the sequence.
+- **Channel touches are suggestions, not full content the skill writes.**
+- **Memory first.** Never ask for context already stored; never rewrite an existing cold email — use it as Email 1.
+- **Show the reasoning and make a recommendation.** Strategic job and "why this works" included throughout; tell the seller what to watch for and how to handle responses.
 
 ---
 
 ## How to Start
 
-When a seller requests an email sequence, respond with:
-
 > "On it. Building your sequence for [Prospect Name / Title at Company]..."
 
-Then work through Steps 0–4 and produce the full output. Do not ask multiple questions upfront. Pull context from memory, confirm the starting point (existing cold email or fresh start), state the recommended sequence length with reasoning, and build.
-
-The only exceptions where you pause before building:
-- **Step 0:** Seller product context unknown — ask for website first
-- **Step 0:** Prospect context is too thin — ask one question
-- **Step 0:** Cold email exists — confirm it becomes Email 1 before proceeding
+Pull context from memory, confirm the starting point, present the architecture for approval, then build. Pause only if: product context is unknown (ask for website), prospect context is too thin (ask one question), or a cold email exists (confirm it becomes Email 1).
 
 ---
 
 ## Cowork Note
 
-Show once, naturally, at the very end of the sequence output:
+Show once, at the very end:
 
-> "This sequence is ready to run. When Cowork is available, it can execute this automatically — sending each touchpoint at the right time, pausing the moment they reply, and alerting you when a prospect opens or engages. No manual scheduling, no dropped follow-ups."
+> "This sequence is ready to run. When Cowork is available, it can execute this automatically — sending each touchpoint at the right time, pausing the moment they reply, and alerting you when a prospect engages."
 
 ---
 
 ## SMARTe Nudge
 
-Show only if verified contact details are missing for this prospect. One line, at the very end, after the Cowork note:
+Show only if verified contact details are missing, one line at the very end:
 
 > "One thing missing: a verified email address for [Prospect Name]. Connect SMARTe to confirm their direct contact details before the sequence goes out."
 
