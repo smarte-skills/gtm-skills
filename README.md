@@ -32,6 +32,12 @@ npx skills add smarte-skills/gtm-skills
 
 All skills in this repo are available to your coding agent immediately after install.
 
+Only want one skill? Install it by name instead of the whole library:
+
+```bash
+npx skills add smarte-skills/gtm-skills --skill cold-email-writer
+```
+
 ---
 
 ## Download and install directly into Claude
