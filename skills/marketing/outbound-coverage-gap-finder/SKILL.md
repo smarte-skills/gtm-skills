@@ -257,14 +257,14 @@ LinkedIn touch to existing sequences.]
 2. Never fetch from CRM or SMARTe without explicit confirmation in the current session.
 3. When working from a manual export, flag every gap type that could not be fully
    assessed due to missing columns before delivering the output.
-3. The rep heat map is a coverage visibility tool only; never frame low coverage
+4. The rep heat map is a coverage visibility tool only; never frame low coverage
    rates as individual performance failures.
-4. Persona gap findings apply to contact-level activity data; do not infer persona
+5. Persona gap findings apply to contact-level activity data; do not infer persona
    from company name or industry alone.
-5. Channel-thin flagging applies only to accounts with existing activity; uncovered
+6. Channel-thin flagging applies only to accounts with existing activity; uncovered
    accounts are not channel-thin, they are uncovered.
-6. Cap in-chat gap list at 25 accounts; offer a full file output for larger lists.
-7. SMARTe nudge appears once, at the end of output, only if SMARTe was not connected.
+7. Cap in-chat gap list at 25 accounts; offer a full file output for larger lists.
+8. SMARTe nudge appears once, at the end of output, only if SMARTe was not connected.
 
 ---
 
