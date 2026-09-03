@@ -44,15 +44,9 @@ them clearly before proceeding:
 
 ---
 
-## Step 1 — CRM Pull (Required)
+## Step 1 — Pull Account and Activity Data
 
-CRM data is required for this skill. If CRM MCP is not connected, stop and state:
-
-> "This skill requires CRM access to pull account lists and activity data. Please
-> connect your CRM MCP and re-run, or export your account and activity data and paste
-> it here."
-
-If CRM MCP is connected, ask before pulling:
+**If CRM MCP is connected**, ask before pulling:
 
 > "I will pull the following from your CRM: the ICP account list, outbound activity
 > logs per account (emails sent, calls logged, LinkedIn touches), the contact persona
@@ -65,6 +59,20 @@ Pull on confirmation. Extract per account:
 - Assigned rep or territory
 
 Never fetch from CRM without explicit confirmation in the current session.
+
+**If CRM MCP is not connected**, ask the marketer to provide the data manually:
+
+> "CRM is not connected. You can still run this analysis by providing:
+> 1. Your ICP account list (paste company names or upload a CSV)
+> 2. An activity export from your CRM or sequencing tool (Outreach, Salesloft,
+>    HubSpot, Apollo) as a CSV with columns for: company, last touch date, touch
+>    count, channel, and contact title where available
+>
+> Paste or upload what you have and I will work with it. Missing columns will limit
+> the corresponding gap type and will be flagged clearly in the output."
+
+Accept partial data. Flag which gap types cannot be fully assessed due to missing
+columns, but run all checks possible with what is provided.
 
 ---
 
@@ -234,7 +242,7 @@ LinkedIn touch to existing sequences.]
 
 | Scenario | Action |
 |---|---|
-| CRM not connected | State that CRM is required; stop and do not attempt to work around it |
+| CRM not connected | Ask for a manual account list and activity export; flag which gap types are limited by missing columns |
 | CRM returns accounts with no activity data | Classify as uncovered; note that activity logging may be incomplete |
 | Target persona not defined by marketer | Ask before running persona gap analysis; do not infer the target persona |
 | Territory or rep data not in CRM | Skip the heat map section; note the gap and suggest adding rep assignments |
@@ -247,6 +255,8 @@ LinkedIn touch to existing sequences.]
 
 1. Never run the gap analysis before the preview in Step 2 is confirmed.
 2. Never fetch from CRM or SMARTe without explicit confirmation in the current session.
+3. When working from a manual export, flag every gap type that could not be fully
+   assessed due to missing columns before delivering the output.
 3. The rep heat map is a coverage visibility tool only; never frame low coverage
    rates as individual performance failures.
 4. Persona gap findings apply to contact-level activity data; do not infer persona
