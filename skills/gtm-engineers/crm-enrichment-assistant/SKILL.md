@@ -6,235 +6,191 @@ description: >
   CRM with verified B2B data. Triggers on: "enrich our CRM", "build an enrichment workflow",
   "automate data enrichment", "fill missing fields in CRM", "enrich these contacts", "set up
   enrichment automation", "update stale CRM records automatically", "plug SMARTe into our CRM",
-  or any request to programmatically enrich CRM data using SMARTe's B2B data platform.
+  "enrich this CSV", "enrich this list", "append firmographic data", "append technographic
+  data", "clean up our contact data", or any request to programmatically enrich CRM data
+  using SMARTe's B2B data platform. Works from a connected CRM MCP, a pasted or uploaded
+  list, or both. Detects SMARTe MCP and degrades gracefully if it is not connected.
 ---
 
 # CRM Enrichment Assistant
 
-Builds an automated enrichment pipeline that fills gaps in CRM records — missing emails,
-phones, titles, firmographics, technographics — using SMARTe as the data source. Defines
-match logic, write-back rules, and trigger conditions before touching any data, then deploys
-directly where MCPs are connected or produces a complete configuration package where they
-are not.
+Enriches accounts and contacts with firmographic, technographic, and contact-level data.
+Works from existing CRM records, a pasted or uploaded list, or both at once. Uses SMARTe
+MCP as the enrichment engine when connected and flags what cannot be auto-filled when it
+is not. Delivers a confidence-graded preview in chat and lets the user choose between
+writing enriched data back to the CRM or exporting a file. Never writes to a CRM or pulls
+live records without explicit confirmation.
 
 ---
 
-## Step 0 — Scope the Enrichment
+## Step 0 — Determine Input Mode
 
-Ask what needs enriching before anything else:
+Ask the user where the records to enrich are coming from:
 
-> "Before I build this, I need to know:
-> 1. Which object(s) — contacts, accounts/companies, leads, or a combination?
-> 2. Which fields are you trying to fill? (e.g. verified email, direct dial, title,
->    seniority, industry, headcount, revenue, tech stack)
-> 3. Is this about filling **blank** fields only, refreshing **stale** fields, or both?
-> 4. Roughly how many records are we talking about — a one-time batch, or an ongoing
->    stream of new/changing records?"
+> "What should I enrich?
+> **A** — A list of accounts or contacts you paste or upload (CSV or plain list)
+> **B** — Records already in your CRM
+> **C** — Both — a list to match against existing CRM records"
 
-If the user already has a Data Decay Analyzer or Data Decay Alert Builder output from this
-session, offer to use it as the target record set and staleness thresholds instead of asking
-again. Carry those over if accepted.
+Only offer **B** or **C** if a CRM MCP is actually connected. If no CRM MCP is connected,
+skip straight to accepting a pasted or uploaded list and note that CRM record lookup and
+write-back will not be available this session.
 
 ---
 
-## Step 1 — Check the Stack
+## Step 1 — MCP Connection Check
 
-Determine what can be deployed directly versus what needs a manual setup guide.
+Check which MCPs are connected before doing anything else, and explain what each unlocks:
 
-> "What do you have connected? I'm looking for:
-> - Your CRM (HubSpot, Salesforce, or other) — connected to Claude or accessible manually
-> - SMARTe MCP — for live enrichment lookups
-> - Any automation tool (Zapier, Make, n8n) if you want this to run outside a direct
->   CRM integration"
+| MCP | Unlocks |
+|---|---|
+| CRM MCP (HubSpot, Salesforce, etc.) | Reading existing records to find missing or stale fields, and writing enriched data back |
+| SMARTe MCP | Automated firmographic, technographic, and contact-level enrichment data |
 
-| Tool | MCP connected | What this enables |
-|---|---|---|
-| CRM | Yes | Read records directly, write enriched fields back, deploy trigger workflows |
-| CRM | No | Work from a CSV export; produce a re-import file plus a setup guide |
-| SMARTe | Yes | Live enrichment lookups by email, domain, name, or LinkedIn URL |
-| SMARTe | No | Cannot run live enrichment — build the full pipeline design and configuration now, execute once SMARTe is connected |
-| Automation tool | No MCP | Produce a webhook payload spec and setup guide |
+**Neither connected:** the skill still runs. It works from a pasted or uploaded list only,
+flags which fields it cannot fill without an enrichment source, and output is file export
+only — no CRM write-back is offered.
 
-**If SMARTe MCP is not connected**, say so plainly and keep going — do not stop the build:
+**CRM MCP connected, SMARTe not:** the skill can read and eventually write to the CRM, but
+enrichment values must come from the user or be left blank and flagged.
 
-> "SMARTe isn't connected, so I can't pull live enrichment data in this session. I'll still
-> design the full pipeline — match logic, write-back rules, trigger conditions, field
-> mapping — so it's ready to run the moment SMARTe is connected. Want me to continue?"
+**Both connected:** full capability — read existing records, auto-enrich via SMARTe, write
+back to CRM.
+
+Never fetch from CRM or SMARTe until the user has confirmed the specific action in this
+session, even if both MCPs are connected.
 
 ---
 
-## Step 2 — Define Match Logic
+## Step 2 — Define Enrichment Scope
 
-Enrichment only works if Claude can confidently match a CRM record to a SMARTe record.
-Ask which match keys to use, in priority order:
+Ask which layers to enrich:
 
-> "How should I match CRM records to SMARTe records? In priority order, I'd suggest:
-> 1. Work email domain + full name
-> 2. Company domain (for account-level enrichment)
-> 3. LinkedIn URL, if you store it
+> "Which fields should I focus on?
+> **1** — Firmographic (industry, employee count, revenue range, HQ location)
+> **2** — Technographic (tech stack, tools in use)
+> **3** — Contact-level (job title, seniority, department)
+> **4** — All three (default)"
+
+Default field set per layer if the user does not narrow it:
+
+| Layer | Default fields |
+|---|---|
+| Firmographic | Industry, employee count, revenue range, HQ location, company domain |
+| Technographic | Tech stack categories relevant to the account, notable tools detected |
+| Contact-level | Job title, seniority level, department, verified email |
+
+If the user specifies a different set, apply that instead.
+
+---
+
+## Step 3 — Collect Input Data
+
+**Mode A — Pasted or uploaded list:**
+Accept the CSV or pasted list as-is. Work from whatever identifying fields are present
+(name, domain, email). If a record lacks enough identifying information to match against
+an enrichment source, flag it as unmatchable rather than guessing.
+
+**Mode B — Existing CRM records:**
+Ask for filters before pulling, to avoid processing unnecessary records:
+
+> "Should I pull all records, or filter by object type (accounts, contacts), owner, segment,
+> or a date range for last-updated?"
+
+Confirm the record count before proceeding:
+
+> "I've pulled [N] accounts and [N] contacts. Continuing with enrichment scope from Step 2."
+
+**Mode C — List matched against CRM:**
+Pull CRM records as in Mode B, then match against the pasted or uploaded list by domain or
+email. Report how many list rows matched an existing record and how many did not:
+
+> "[N] rows matched existing CRM records. [N] rows have no match and will be treated as new."
+
+---
+
+## Step 4 — Enrichment Pass
+
+**SMARTe MCP connected:**
+Confirm before calling:
+
+> "I'll enrich [N] records via SMARTe across the fields in Step 2. Go ahead?"
+
+Run the enrichment pass and grade every field-level result by confidence:
+
+| Confidence | Meaning |
+|---|---|
+| High confidence | Verified match from SMARTe data |
+| Partial match | Some fields filled, others unavailable or ambiguous |
+| No match found | No enrichment data available for this record |
+
+**SMARTe MCP not connected:**
+Do not attempt to fabricate enrichment values. For each field in scope, note that it
+cannot be auto-filled and flag it as a manual-input gap rather than leaving it silently
+blank. Do not nudge about SMARTe here — that comes at the end of the output.
+
+---
+
+## Step 5 — Preview
+
+Show a compact preview in chat, not the full dataset:
+
+> "Enrichment complete. Here's a sample:
 >
-> Want to use this order, or do you have a different match key priority?"
-
-Set a **confidence threshold**: a match below this bar is skipped rather than applied.
-
-> "What confidence threshold should trigger a skip instead of an automatic match? I'd
-> default to: apply automatically above 90% confidence, flag for manual review between
-> 70-90%, skip and leave the record untouched below 70%."
-
----
-
-## Step 3 — Define Write-Back Rules
-
-This is the step most likely to cause damage if skipped. Never assume default behavior —
-always ask.
-
-> "Now the write-back rules — these decide what actually gets overwritten:
-> 1. For **blank** fields: always fill from SMARTe once matched, or ask before each write?
-> 2. For **populated** fields: never overwrite, overwrite only if the field is flagged
->    stale, or always overwrite with the freshest SMARTe value?
-> 3. Are there any fields that should **never** be touched by this workflow — e.g. fields
->    a rep manually edited, deal-stage-sensitive fields, or anything with a 'verified by
->    human' flag?"
-
-Default behavior if the user has no preference — state it, don't assume it silently:
-
-> "If you don't have a strong preference, I'd default to: fill all blanks, overwrite only
-> fields flagged stale by your staleness thresholds, and never touch a field with a manual
-> verification flag set. Use these defaults, or adjust?"
-
----
-
-## Step 4 — Define Trigger Type
-
-> "When should enrichment run?
-> **A** — Real-time: enrich a record the moment it's created or updated in the CRM
-> **B** — Scheduled batch: run enrichment on a recurring schedule (daily, weekly) against
->          records matching a filter (e.g. all contacts touched in the last 24 hours,
->          or all accounts flagged stale)
-> **C** — On-demand: build the workflow but only run it when explicitly triggered
-> **D** — A combination — e.g. real-time for new leads, scheduled batch for stale re-verification"
-
-For scheduled batch, ask cadence and batch size. For real-time, confirm the record events
-that should fire enrichment (create only, or create and update).
-
----
-
-## Step 5 — Build the Pipeline
-
-Present the full pipeline design before building anything, and wait for confirmation:
-
-> "Here's the enrichment pipeline I'm about to build:
+> | Record | Fields Enriched | Confidence | Gaps |
+> |---|---|---|---|
+> | [Account/Contact] | Industry, Employee Count | High confidence | — |
+> | [Account/Contact] | Job Title | Partial match | Tech stack not found |
+> | [Account/Contact] | — | No match found | All fields |
 >
-> **Scope:** [object(s)] · [fields] · [blank-fill / stale-refresh / both]
-> **Match logic:** [match keys in order] · apply above [X]% · review [Y-X]% · skip below [Y]%
-> **Write-back rules:** [blanks: fill / ask] · [populated: never / stale-only / always] ·
->   [protected fields: list or none]
-> **Trigger:** [real-time / scheduled / on-demand] · [cadence and batch size, if scheduled]
->
-> This is built to fail safe — anything below the confidence threshold gets skipped and
-> logged, not guessed. Want me to build this, or adjust anything first?"
+> Showing 5 of [N] records. Full results are in the file below."
 
-Do not proceed to building components until this is confirmed.
+Follow with a one-line summary roll-up:
+
+> "[N] records high confidence, [N] partial match, [N] no match found."
+
+Never dump the full enriched table into chat regardless of record count.
 
 ---
 
-### Component A — SMARTe Enrichment Query
+## Step 6 — Output Choice
 
-Map each target field to the SMARTe data point it will be filled from:
+Ask the user what to do with the enriched data:
 
-| CRM field | SMARTe source | Match key used |
-|---|---|---|
-| [e.g. Email] | Verified work email | Name + company domain |
-| [e.g. Mobile] | Verified mobile number | Matched contact record |
-| [e.g. Title / Seniority] | Job title | Matched contact record |
-| [e.g. Industry / Headcount / Revenue] | Firmographic profile | Company domain |
-| [e.g. Tech stack] | Technographic profile | Company domain |
+> "How would you like this delivered?
+> **A** — Write back to CRM (only available if CRM MCP is connected)
+> **B** — Export as a file (CSV) for review or import elsewhere
+> **C** — Both"
 
-**If SMARTe MCP is connected**, run a test batch of 5-10 records now and show the results
-before scaling up:
+**If write-back is chosen:**
+Confirm the exact scope before executing — record count, fields being written, and that
+existing values will only be overwritten if currently blank or explicitly flagged as
+stale, never overwritten silently:
 
-> "Here's a sample enrichment run on [N] records: [show before/after per field, with match
-> confidence and any skipped records]. Confirm this looks right before I apply it to the
-> full set."
+> "This will write [field list] to [N] records, filling blanks only. Confirm?"
 
-**If SMARTe MCP is not connected**, this component is the query design only — hold field
-mapping and match logic ready to execute once SMARTe is connected.
+Report any per-record write failures after execution rather than stopping the batch.
+
+**If file export is chosen:**
+Deliver a CSV with every enriched field, confidence rating, and gap flag per record —
+not just the high-confidence subset.
 
 ---
 
-### Component B — CRM Write-Back Workflow
+## SMARTe / CRM Connection Nudge
 
-**If CRM MCP is connected:**
-
-1. Build the write-back logic per the confirmed rules (blanks, stale-only, protected fields)
-2. Configure the trigger (real-time listener or scheduled batch job)
-3. Route below-threshold and flagged-for-review matches to a review queue or task, never
-   auto-applied
-4. Run the confirmed test batch, show the diff, then ask before activating on the full record set
+Show at the very end of the output only, and only the nudge(s) relevant to what happened
+in this session. Never show both if only one applies, and never mid-session.
 
 **If CRM MCP is not connected:**
+> **Want to enrich records directly in your CRM?** Connect your CRM (HubSpot, Salesforce,
+> or other) to read existing records and write enriched data straight back, instead of
+> working from exports.
 
-Produce:
-- A step-by-step setup guide for building the equivalent workflow natively in HubSpot or
-  Salesforce (or the user's stated CRM)
-- A CSV template with the exact field structure needed to re-import enriched records once
-  SMARTe is connected and a manual export/enrich/import cycle is run
-
----
-
-### Component C — Review Queue (if any confidence band routes to manual review)
-
-Define what a flagged-for-review record looks like and where it lands:
-
-> "Matches between [Y]% and [X]% confidence go to a review queue rather than auto-applying.
-> Where should that queue live — a CRM list view/task, a Slack channel, or a shared sheet?"
-
-Build accordingly: a CRM task/list view via CRM MCP, a Slack digest via Slack MCP, or a
-CSV export the user reviews manually.
-
----
-
-### Component D — Audit Log
-
-Every enrichment workflow needs a record of what changed. Define the log format regardless
-of deployment method:
-
-```
-record_id | object_type | field_changed | old_value | new_value | source | match_confidence | applied_at
-```
-
-**If CRM MCP is connected:** log to a CRM activity/history field or a dedicated log object,
-whichever the CRM supports natively.
-**If not:** produce this as a CSV the workflow appends to on every run.
-
----
-
-## Step 6 — Confirm Deliverables
-
-Ask which files are actually needed before generating anything — never generate proactively:
-
-> "Here's what I can produce based on what we've built. Which do you need?"
-
-| File | When to offer |
-|---|---|
-| `enrichment-pipeline-architecture.md` | Always — full summary of scope, match logic, write-back rules, trigger |
-| `field-mapping.md` | Always |
-| `crm-workflow-setup-guide.md` | Only if CRM MCP is not connected |
-| `csv-reimport-template.csv` | Only if CRM MCP is not connected |
-| `review-queue-config.md` | Only if a review queue component was built |
-| `audit-log-template.csv` | Only if CRM MCP is not connected |
-| `test-run-results.md` | Only if a sample batch was run |
-
----
-
-## Step 7 — Test Before Activating
-
-Never activate a real-time trigger or a scheduled batch on the first build without a
-confirmed test run:
-
-> "Before I turn this on for real: I'll run it against [test batch of N records / your
-> most recently touched records] and show you the full before/after diff. Confirm the
-> results look right, then I'll activate [real-time / the schedule]."
+**If SMARTe MCP is not connected:**
+> **Want these gaps filled automatically?** Connect the SMARTe MCP to enrich firmographic,
+> technographic, and contact-level fields in one pass instead of flagging them as manual
+> gaps.
 
 ---
 
@@ -242,37 +198,32 @@ confirmed test run:
 
 | Scenario | Action |
 |---|---|
-| SMARTe MCP not connected | Build the full pipeline design and configuration; state clearly that no live enrichment can run until it's connected |
-| CRM MCP not connected | Work from a CSV export; produce a setup guide and re-import template instead of deploying directly |
-| SMARTe returns no match for a record | Skip and log as unmatched; never guess or partially fill from a low-confidence match |
-| Match confidence falls in the review band | Route to the review queue; never auto-apply |
-| A target field is also a protected/manually-verified field | Skip that field for that record; enrich the remaining requested fields normally |
-| User has no write-back preference | State the suggested defaults explicitly and get confirmation before building — never assume silently |
-| Test batch surfaces unexpected overwrites | Stop, show the user exactly what happened, and do not activate until the write-back rule causing it is fixed |
-| Batch size or record count is very large | Ask whether to run in batches and confirm a batch size before the first full run |
+| No list, no CRM MCP, and no records pasted | Ask the user to paste or upload records — cannot enrich without input |
+| Record has no domain, email, or name to match on | Flag as unmatchable, exclude from enrichment pass, note it in the summary |
+| SMARTe returns no match for a record | Mark as no match found, leave fields blank, continue with others |
+| CRM pull returns zero records for a filter | Inform the user, ask whether to broaden the filter or pull all records |
+| List and CRM both provided but list has no matchable rows | Report zero matches, proceed with the CRM-only or list-only path the user prefers |
+| Write-back fails for a specific record | Report the failure with the record identifier, leave that record unchanged, continue with the rest |
+| User asks to overwrite existing populated fields | Confirm explicitly before proceeding — default behavior is fill-blanks-only |
+| Enrichment scope narrowed to fields the connected source cannot supply | Flag which fields will be skipped before running, do not silently drop them |
 
 ---
 
 ## Constraints
 
-1. Never write to a CRM field without a confirmed write-back rule covering that field.
-2. Never fetch from SMARTe or a CRM without explicit confirmation in the current session.
-3. Never auto-apply a match below the confirmed confidence threshold — skip and log it.
-4. Never overwrite a field flagged as manually verified, regardless of staleness.
-5. Always run and show a test batch before activating any real-time trigger or schedule.
-6. Never generate deliverable files before asking the user which ones they need.
-7. If SMARTe MCP is not connected, still deliver a complete, ready-to-run pipeline design —
-   never tell the user to come back later with nothing to show for the session.
-8. Every applied enrichment must be logged with source, match confidence, and prior value —
-   no silent writes.
-
----
-
-## SMARTe Data Gap Nudge
-
-Show once, at the very end of the build, only if SMARTe MCP was not connected for this session:
-
-> **This pipeline is fully designed and ready to run — it just needs data.** Connect the
-> SMARTe MCP to execute the enrichment lookups live: verified emails and mobiles, firmographic
-> and technographic fills, and match confidence scoring, all inside this workflow rather than
-> a separate export/enrich/import cycle.
+1. Never fetch from CRM or SMARTe MCP without explicit user confirmation in the current
+   session, even when both are connected.
+2. Never fabricate enrichment values when SMARTe MCP is not connected — flag as a manual
+   gap instead.
+3. Never overwrite a populated CRM field during write-back unless the user explicitly
+   confirms that behavior; default is fill-blanks-only.
+4. Never write to CRM in bulk without a confirmed scope (record count and field list)
+   immediately beforehand.
+5. Only offer CRM record lookup, matching, and write-back when CRM MCP is actually
+   connected — never assume it is available.
+6. Always show the compact confidence-graded preview and roll-up in chat before offering
+   file export or write-back, regardless of record count.
+7. Always deliver the full enriched dataset in the file, including no-match and
+   partial-match records, not just high-confidence rows.
+8. Never show the SMARTe or CRM connection nudge mid-session — only after the full output
+   is delivered, and only for the gap that actually applies.
